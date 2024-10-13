@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Ángel Rodríguez, desarrollador frontend en formación">
+    <title>Portafolio de Ángel Rodríguez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Righteous&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#experiencias">Experiencias</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" id="personal-info-link">🔒Private</a></li>    
+            </ul>
+        </nav>
+        <h1>Ángel Rodríguez</h1>
+        <img class="foto-angel" src="assets/foto-angel.png" alt="foto-principal-angel">
+        <p class="comentario-principal" >Reclutador y Desarrollador Frontend en Formación</p>
+    </header>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi">
+        <div class="contenedor">    
+            <div class="contenedor-img">
+                <img class="img-about-me" src="assets/about-me.jpg" alt="avisoLuminosoAboutMe">
+                <div class="hover-text">¡CLICK!</div>
+            </div>
+            <div class="contenedor-text">
+                <p>Soy tecnólogo en gestión del talento humano con más de 8 años de experiencia. Actualmente me estoy formando como desarrollador frontend, aprendiendo HTML, CSS y JavaScript. Mi objetivo es combinar mis habilidades en automatización y recursos humanos con tecnología para crear soluciones digitales efectivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección experiencias -->
+    <section id="experiencias">
+        <h2>Experiencias</h2>
+        <div class="experiencia">
+            <h3>Experiencia profesional</h3>
+            <p>Durante más de 8 años, me he dedicado a la gestión del talento humano, especializándome en procesos de reclutamiento y selección para empresas de diversos sectores, desde logística hasta telecomunicaciones. Mi experiencia me ha permitido desarrollar habilidades en la automatización de procesos de selección, aplicando tecnologías innovadoras para optimizar tiempos y mejorar la eficiencia. He trabajado en empresas que requerían perfiles tanto operativos como de mandos medios, lo que me ha dotado de una visión amplia y estratégica sobre la captación de talento. Además, mi dominio de plataformas como LinkedIn Recruiter, InfoJobs e Indeed, junto con mi capacidad para realizar entrevistas por competencias, me ha permitido destacar en el análisis y evaluación de candidatos.
+            </p>
+           
+        </div>
+        <div class="experiencia">
+            <h3>La tecnología y yo...</h3>
+            <p>
+                Actualmente, estoy profundizando en el desarrollo web, estudiando frontend con HTML, CSS y JavaScript. Esta formación me ha permitido adquirir una base sólida en la creación de interfaces funcionales y estéticas. Estoy combinando estos conocimientos con mi experiencia en recursos humanos para explorar cómo la tecnología puede transformar procesos de selección y mejorar la experiencia del usuario. Adicionalmente, tengo conocimientos en inteligencia artificial, lo que me otorga una ventaja competitiva en la creación de soluciones automatizadas y personalizadas para la captación y gestión del talento.</p>
+        </div>
+        <!-- Añade más experiencia aquí -->
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Ángel Rodríguez - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Archivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Righteous", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #141313; /* Fondo oscuro elegante */
+    color: #E0E0E0; /* Texto en gris claro para buen contraste */
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+/* Estilo del encabezado */
+header {
+    background-image: url(assets/fondo-de-ladrillos-negro.webp);
+    background-position: center;
+    color: #E0E0E0; /* Gris claro */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    color: #efeff3; /* Gris suave */
+}
+
+.foto-angel {
+    border-radius: 50%;
+    max-width: 20%;
+}
+
+.comentario-principal {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #e9f0f8; /* Azul elegante para destacar */
+    letter-spacing: 1.5px;
+}
+
+/* Estilo de la navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #6FA4FF; /* Azul elegante para los enlaces */
+    text-decoration: none;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+}
+
+/* Efecto hover del ícono de candado */
+#personal-info-link {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #0a0a0a; /* Color inicial: azul */
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+  
+#personal-info-link:hover {
+    color: red; /* Cambia a rojo cuando se pasa el cursor por encima */
+  }
+
+/* Sección: Sobre mí */
+
+#sobre-mi {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .contenedor-img {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    transition: transform 1s ease; /* Animación de la imagen al deslizar */
+    z-index: 1;
+  }
+  
+  .img-about-me {
+    width: 100%;
+    height: auto;
+  } */ /*De esta apertura de comentaro depende que funcione la ubicacion del texto*/
+  
+  /* Contenedor para la imagen y el texto en hover */
+.contenedor-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Estilo de la imagen */
+.img-about-me {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease; /* Transición suave al ocultar la imagen */
+}
+
+/* Texto que aparecerá en hover */
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.5s ease; /* Transición suave para el texto */
+}
+
+/* Efecto hover */
+.contenedor-img:hover .img-about-me {
+    opacity: 0; /* Oculta la imagen */
+}
+
+.contenedor-img:hover .hover-text {
+    opacity: 1; /* Muestra el texto */
+}
+/* -------------------- */
+
+  .contenedor-text {
+    padding: 20px;
+    background-color: #1A1A1A; /* Fondo oscuro para el texto */
+    color: #E0E0E0;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease; /* Animación de aparición */
+  }
+  
+  .revelar .img-about-me {
+    transform: translateX(-150%); /* Desliza la imagen hacia la izquierda */
+  }
+  
+  .revelar .contenedor-text {
+    opacity: 1; /* Muestra el texto */
+  }
+  
+/* Sección: experiencia */
+.experiencia {
+    background-color: #222; /* Fondo gris oscuro */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.experiencia h3 {
+    font-size: 22px;
+    color: #6FA4FF;
+    margin-bottom: 10px;
+}
+
+.experiencia p {
+    color: #D3D3D3; /* Gris suave para el texto */
+    font-size: 16px;
+}
+
+/* Sección: Contacto */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #D3D3D3;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E0E0E0;
+}
+
+form input[type="submit"] {
+    background-color: #6FA4FF;
+    color: #FFF;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5A8ACC;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #6FA4FF;
+    font-size: 14px;
+}
+
+/*Opciones de tipo de letra..
+
+https://fonts.google.com/specimen/Rubik+Wet+Paint?query=Rubik (es como pintura que se derrite)
+.rubik-wet-paint-regular {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+https://fonts.google.com/specimen/Righteous?query=Righteous (tiene un diseño normal pero con puntas) 
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+https://fonts.google.com/specimen/Fredericka+the+Great?query=Fredericka+the+Great 
+.fredericka-the-great-regular {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+/* Estilos para la página de información personal */
+/* Contenedor general */
+body {
+    margin-top: 3%;
+    margin-right: 3%;
+    margin-left: 3%;
+    
+
+}
+
+.contenedor-scroll {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    padding: 150px; 
+    background-color: #1b1b1b;
+    overflow: hidden; /* Oculta imágenes desvordadas*/ 
+    position: relative; 
+    align-items: center;
+    border-radius: 20px;
+}
+
+.contedor-imagenes {
+    height: 400px;
+    width: 90%;
+}
+.imagen3 {
+    width: 90%;
+}
+
+/* Estilos de los botones */
+
+.scroll-btn {
+    width: 50px;
+    height: 65px;
+    display: flex;
+    position: relative;
+    
+}
+
+
+/* Carrete de imágenes a la izquierda */
+.carrete-imagenes {
+    width: 55%;
+    height: 250px;
+    display: flex;
+    position: inherit;
+    justify-content: center;
+    gap: 10%;
+    overflow-x: scroll;
+    
+}
+
+.carrete-imagenes img {
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.carrete-imagenes img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Información personal a la derecha */
+.info-personal {
+    position: relative;
+    z-index: 1;
+    width: 40%;
+    height: 200%;
+    background-image: url(assets/img-top-secret.jpg);
+    background-position: center;
+    background-size: 120%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: #0a0a0a;
+}
+
+.info-personal h2 {
+    font-family: "Special Elite", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: #f73939;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+
+.info-personal ul {
+    list-style-type: none;
+    padding: 0;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.info-personal li {
+    font-family: "Special Elite", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+    margin: 3px 0;
+   
+}
+
+----/* Sección del emprendimiento */
+.descripcion-emprendimiento {
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    padding: 40px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.descripcion-emprendimiento h2 {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #992626;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.descripcion-emprendimiento p {
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Link de regreso al home */
+.link-regreso {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 38px;
+    text-decoration: none;
+    color: #faf3f3;
+
+}
+
+.link-regreso:hover {
+    color: #b31111;
+}
+
